@@ -1,0 +1,41 @@
+:root {
+    --primary-color: #933C24;
+    --secondary-color: #E9BD8C;
+    --button-ff: 'Inter', sans-serif;
+    --body-ff: 'Poppins', sans-serif;
+    --title-ff: 'Sansita Swashed', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-ff);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+p{
+    font-size: 22px;
+    font-weight: 700;
+}
+button{
+    font-family: var(--button-ff);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+h1{
+    font-family: var(--title-ff);
+    font-size: 4.2rem;
+    line-height: 4rem;
+
+}
+h2{
+    font-family: var(--title-ff);
+    font-size: 3.5rem;
+    line-height: 3.375rem;
+}
