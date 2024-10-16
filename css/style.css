@@ -1,41 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--body-ff);
+  transition: all 0.3s ease;
+}
+
+*:active,
+*:focus {
+  outline: none;
+}
+
+.resizer {
+  max-width: 1120px;
+  margin: auto;
+}
 :root {
-    --primary-color: #933C24;
-    --secondary-color: #E9BD8C;
-    --button-ff: 'Inter', sans-serif;
-    --body-ff: 'Poppins', sans-serif;
-    --title-ff: 'Sansita Swashed', cursive;
+  --primary-color: #933c24;
+  --secondary-color: #e9bd8c;
+  --button-ff: "Inter", sans-serif;
+  --body-ff: "Poppins", sans-serif;
+  --title-ff: "Sansita Swashed", cursive;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--body-ff);
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: -70px;
+  overflow-x: hidden;
 }
 
-html{
-    scroll-behavior: smooth;
+p {
+  font-size: 22px;
+  font-weight: 600;
+}
+button {
+  font-family: var(--button-ff);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+h1 {
+  font-family: var(--title-ff);
+  font-size: 4.2rem;
+  line-height: 4rem;
+}
+h2 {
+  font-family: var(--title-ff);
+  font-size: 3.5rem;
+  line-height: 3.375rem;
+}
+a {
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: var(--body-ff); 
+   color: white;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/hero-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  padding: 30px 120px;
+}
+nav .logo {
+  height: 100%;
+}
+
+nav .links ul {
+  list-style-type: none;
+}
+
+nav .links ul li {
+  display: inline-block;
+  margin-right: 30px;
+}
+nav .links ul a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: white;
+}
+
+nav .links ul a.active {
+  color: var(--secondary-color);
+}
+
+.hero {
+  padding: 30px 120px 0px;
+
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 70px;
+}
+.hero p {
+  color: var(--secondary-color);
+}
+.hero h1 {
+  color: white;
+  line-height: 89px;
+}
+
+.hero a {
+  cursor: pointer;
+  /* margin-top: 80px; */
+  font-size: 22px;
+  font-weight: 600;
+  font-family: var(--button-ff);
+  padding: 16px 32px;
+  border-radius: 8px;
+  border: none;
+  color: var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0);
+}
+.hero a.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+nav .links ul a:hover {
+  text-decoration: underline;
+
+  color: var(--primary-color);
+}
+
+.hero a:not(.active):hover {
+  opacity: 0.8;
+  text-decoration: underline;
+  text-shadow: 1px 1px 5px rgba(134, 134, 134, 0.6);
+}
+.hero a.active:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* products section  */
+
+section {
+  padding: 40px 120px;
+}
+
+.products h2 {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  color: white;
+}
+.cards .card {
+  background-image: url("../images/products/product-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-width: 30%;
+  max-width: 400px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.336);
+  gap: 30px;
+}
+.cards .card img{
+  max-height: 220px;
+  object-fit: contain;
+}
+.cards .card:hover {
+  opacity: .9;
+}
+
+.cards .card .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards .card button {
+  cursor: pointer;
+  font-size: 22px;
+  padding: 10px 20px;
+  display: flex;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: var(--primary-color);
 }
 
 
-p{
-    font-size: 22px;
-    font-weight: 700;
+.promotion{
+  /* max-height:450px; */
+  padding: 50px;
+  width: 100%;
+  background: url("../images/promotion.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
-button{
-    font-family: var(--button-ff);
-    font-weight: 700;
-    font-size: 24px;
+.promotion h2{
+  color: var(--primary-color);
+  line-height: 70px;
+}
+.promotion p{
+  text-align: center;
+  color: #5D5D5D;
+  max-width: 400px;
+  
+}
+.promotion button{
+  width: fit-content;
+  padding: 23px 35px;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-h1{
-    font-family: var(--title-ff);
-    font-size: 4.2rem;
-    line-height: 4rem;
 
+.explore{
+  margin-top: 40px;
 }
-h2{
-    font-family: var(--title-ff);
-    font-size: 3.5rem;
-    line-height: 3.375rem;
+.explore h2{
+  margin: 60px;
+  text-align: center;
 }
+
+.explore .categories{
+display: flex;
+justify-content: center;
+gap: 50px;
+border-bottom: 1px solid #5D5D5D;
+margin: 20px;
+}
+
+.explore .categories a{
+  text-decoration: none;
+  color: #5D5D5D;
+  
+}
+
+.explore .categories a.active{
+  text-decoration: underline var(--primary-color) 2px ;
+}
+
+.grid-container{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.grid-container img{
+
+  min-width: 30%;
+  max-width: 350px;
+}
+
+
+
+
+/* about section  */
+
+
+
+
+.about{
+  /* max-height:450px; */
+  padding: 50px;
+  width: 100%;
+  background: url("../images/about.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.about h2{
+  color: var(--primary-color);
+  line-height: 70px;
+}
+.about p{
+  text-align: center;
+  color: #e3e3e3;
+  max-width: 400px;
+  
+}
+.about button{
+  width: fit-content;
+  padding: 23px 35px;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
