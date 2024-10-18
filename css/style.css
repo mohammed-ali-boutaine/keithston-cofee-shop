@@ -67,7 +67,12 @@ header {
   display: flex;
   flex-direction: column;
 }
-
+.pages-nav{
+  background:url("../images/footer/footer-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 nav {
   display: flex;
   align-items: center;
